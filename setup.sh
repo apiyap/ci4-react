@@ -26,18 +26,11 @@ cp -R react-app $PROJECT_DIR/
 cp README.md $PROJECT_DIR/
 cp package.json $PROJECT_DIR/
 cp webpack.config.js $PROJECT_DIR/
-#npx create-react-app react-app
-#cd react-app
-#npm start
+
 cd $PROJECT_DIR
-#npm init -y
 
 echo -e "${IGre}Install webpack to ${PRJ_NAME}${RESET}"
 npm install .
-#npm install --save-dev path @babel/core @babel/preset-react react babel-loader react-dom 
-#npm install --save-dev webpack webpack-cli  html-webpack-plugin webpack-dev-server webpack-dev-middleware
-#npm i --save-dev -D webpack webpack-cli -g; npm link webpack --save-dev
-#npm install --save-dev  css-loader style-loader sass-loader node-sass file-loader  react-hot-loader clean-webpack-plugin html-webpack-plugin  webpack-dev-server mini-css-extract-plugin
 
 echo -e "${IGre}webpack configure to ${PRJ_NAME}${RESET}"
 
