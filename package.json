@@ -1,7 +1,7 @@
 {
   "name": "ci4-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "CodeIgniter 4 & React",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/apiyap/ci4-react.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Piya Pimchankam",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/apiyap/ci4-react/issues"
