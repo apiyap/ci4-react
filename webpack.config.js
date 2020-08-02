@@ -3,9 +3,17 @@ var path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
+  optimization: {
+    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+  },
   mode: 'production',
   entry: './react-app/src/index.js',
   output: {
@@ -36,11 +44,12 @@ module.exports = {
             // { loader: 'css-loader' },
             {
               loader: MiniCssExtractPlugin.loader,
-              options: {
-                publicPath: (resourcePath, context) => {
-                  return path.relative(path.dirname(resourcePath), context) + '/';
-                },
-              },
+              // options: {
+              //   hmr: process.env.NODE_ENV === 'development',
+              //   publicPath: (resourcePath, context) => {
+              //     return path.relative(path.dirname(resourcePath), context) + '/';
+              //   },
+              //},
             },
             'css-loader',
           ],
