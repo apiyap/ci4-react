@@ -15,7 +15,7 @@ module.exports = {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   mode: 'production',
-  entry: './react-app/src/index.js',
+  entry: './react-app/app.js',
   output: {
     path: path.resolve(__dirname, './public/dist'),
     filename: '[name].js'
@@ -82,9 +82,9 @@ module.exports = {
  plugins: [
    // new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './react-app/src/index.html',
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './react-app/src/index.html',
+    // }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
