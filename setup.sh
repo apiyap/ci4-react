@@ -26,14 +26,19 @@ cp -R react-app $PROJECT_DIR/
 cp README.md $PROJECT_DIR/
 cp package.json $PROJECT_DIR/
 cp webpack.config.js $PROJECT_DIR/
+cp ci4-app.patch $PROJECT_DIR/app/
 
 cd $PROJECT_DIR
 
 echo -e "${IGre}Install webpack to ${PRJ_NAME}${RESET}"
 npm install .
 
-echo -e "${IGre}webpack configure to ${PRJ_NAME}${RESET}"
+echo -e "${IGre}Install CodeIgniter 4  patches ${PRJ_NAME}${RESET}"
+cd $PROJECT_DIR/app/
+patch -s -p2 < ci4-app.patch
 
+cd $PROJECT_DIR
+echo -e "${IGre}webpack configure to ${PRJ_NAME}${RESET}"
 
 webpack --config webpack.config.js
 
