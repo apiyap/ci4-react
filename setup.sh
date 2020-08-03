@@ -34,10 +34,10 @@ echo -e "${IGre}Install webpack to ${PRJ_NAME}${RESET}"
 npm install .
 
 echo -e "${IGre}Install CodeIgniter 4  patches ${PRJ_NAME}${RESET}"
-cd $PROJECT_DIR/app/
+cd app/
 patch -s -p2 < ci4-app.patch
 
-cd $PROJECT_DIR
+cd ..
 echo -e "${IGre}webpack configure to ${PRJ_NAME}${RESET}"
 
 webpack --config webpack.config.js
