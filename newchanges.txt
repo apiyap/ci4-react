@@ -1,0 +1,5 @@
+Only in project-root/app/Controllers: CustomerController.php
+Only in project-root/app/Models: CustomerModel.php
+Only in project-root/app/Views: customer.php
+project-root/app/Config/Boot/development.php
+project-root/app/Config/Routes.php
